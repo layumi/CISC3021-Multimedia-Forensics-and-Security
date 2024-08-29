@@ -105,7 +105,7 @@ axs[2].set_title('Histogram of B Channel')
 plt.show()
 ```
 
-#Image Analysis: Spatial Correlation
+# Image Analysis: Spatial Correlation
 ```python
 # Draw a scatter diagram about pairs of neighboring pixel values (horizontal or vertical)
 pixels = np.array(img)
@@ -195,7 +195,7 @@ plt.show()
 ```
 
 
-PSNR
+# PSNR
 ```python
 def psnr(img1, img2):
     mse = np.mean((img1 - img2) ** 2)
