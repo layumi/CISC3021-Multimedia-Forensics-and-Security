@@ -1,6 +1,6 @@
 # CISC3021 Multimedia Forensics and Security - Lab2
 
-We'll primarily use the numpy library for numerical operations, matplotlib for plotting, and PIL (Pillow) for image handling. Additionally, we'll use the spicy and imageio libraries for specific functionalities.
+We'll primarily use the `numpy` library for numerical operations, `matplotlib` for plotting, and `PIL` (Pillow) for image handling. Additionally, we'll use the `spicy` and `imageio` libraries for specific functionalities.
 Preparation
 First, ensure you have the necessary packages installed:
 pip install numpy matplotlib pillow scipy imageio
