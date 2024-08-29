@@ -157,8 +157,10 @@ plt.imshow(difference)
 plt.title('Difference Image')
 plt.axis('off')
 plt.show()
+```
 
-Color Space Conversion and Chroma Subsampling
+# Color Space Conversion and Chroma Subsampling
+```python
 # Convert the original true-color image from RGB color space to YCbCr color space
 # Note: PIL does not support YCbCr conversion directly, so we'll use OpenCV for this step.
 import cv2
