@@ -55,7 +55,8 @@ plt.title('Grayscale Image')
 plt.axis('off')
 plt.show()
 
-Image Manipulation
+# Image Manipulation
+```python
 # Reverse the colors of all pixel values inside the (both horizontally and vertically) 50% center part of the true-color image
 width, height = img.size
 center_width = int(width * 0.5)
@@ -82,7 +83,7 @@ plt.imshow(img)
 plt.title('Manipulated Image')
 plt.axis('off')
 plt.show()
-
+```
 
 # Image Analysis: Histograms
 ```python
