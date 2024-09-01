@@ -1,15 +1,23 @@
 # CISC3021 Multimedia Forensics and Security - Lab2
 
-We'll primarily use the `numpy` library for numerical operations, `matplotlib` for plotting, and `PIL` (Pillow) for image handling. Additionally, we'll use the `spicy` and `imageio` libraries for specific functionalities.
+We'll primarily use the `numpy` library for numerical operations, `matplotlib` for plotting, and `PIL` (Pillow) for image handling. Additionally, we'll use the `scipy` and `imageio` libraries for specific functionalities.
 
 # Preparation
 First, ensure you have the necessary packages installed:
 ```bash
-pip install numpy matplotlib pillow scipy imageio
+pip install numpy matplotlib pillow scipy imageio opencv-python
 ```
 
 # See Channels
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+import scipy.ndimage as ndimage
+import imageio.v3 as iio
+import os
+import cv2
+
 # Load a true-color RGB image
 image_path = 'path/to/your/image.jpg'  # Change this to the actual path
 img = Image.open(image_path)
@@ -36,14 +44,17 @@ axs[2].axis('off')
 plt.show()
 
 # Show the R, G, and B channels as red, green, and blue images
+r_img = Image.merge('RGB', (r, Image.new('L', r.size), Image.new('L', r.size)))
+g_img = Image.merge('RGB', (Image.new('L', g.size), g, Image.new('L', g.size)))
+b_img = Image.merge('RGB', (Image.new('L', b.size), Image.new('L', b.size), b))
 fig, axs = plt.subplots(1, 3, figsize=(15, 5))
-axs[0].imshow(np.array(r))
+axs[0].imshow(r_img)
 axs[0].set_title('Red Channel')
 axs[0].axis('off')
-axs[1].imshow(np.array(g))
+axs[1].imshow(g_img)
 axs[1].set_title('Green Channel')
 axs[1].axis('off')
-axs[2].imshow(np.array(b))
+axs[2].imshow(b_img)
 axs[2].set_title('Blue Channel')
 axs[2].axis('off')
 plt.show()
@@ -58,7 +69,6 @@ plt.axis('off')
 plt.show()
 
 # Image Manipulation
-```python
 # Reverse the colors of all pixel values inside the (both horizontally and vertically) 50% center part of the true-color image
 width, height = img.size
 center_width = int(width * 0.5)
@@ -169,12 +179,12 @@ img_rgb = cv2.cvtColor(np.array(img), cv2.COLOR_BGR2YCrCb)
 y, cb, cr = cv2.split(img_rgb)
 
 # Subsample the Cb and Cr channels (i.e., halve both horizontal and vertical resolutions)
-cb_subsampled = zoom(cb, (0.5, 0.5))
-cr_subsampled = zoom(cr, (0.5, 0.5))
+cb_subsampled = ndimage.zoom(cb, (0.5, 0.5))
+cr_subsampled = ndimage.zoom(cr, (0.5, 0.5))
 
 # Upsample to get the original size back
-cb_upsampled = zoom(cb_subsampled, (2, 2))
-cr_upsampled = zoom(cr_subsampled, (2, 2))
+cb_upsampled = ndimage.zoom(cb_subsampled, (2, 2))
+cr_upsampled = ndimage.zoom(cr_subsampled, (2, 2))
 
 # Merge the Y, Cb, and Cr channels back together
 img_ycbcr = cv2.merge([y, cb_upsampled, cr_upsampled])
