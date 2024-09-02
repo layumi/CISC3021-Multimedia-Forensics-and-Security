@@ -132,7 +132,7 @@ plt.show()
 ```
 
 
-## Image I/O and Image Compression
+# Image I/O and Image Compression
 ```python
 # Save the manipulated image as a PNG file and a JPG file
 iio.imwrite('manipulated_image.png', np.array(img))
