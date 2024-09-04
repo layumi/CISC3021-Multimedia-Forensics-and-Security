@@ -25,6 +25,25 @@ def LSB_stego_sequential(cov, plaintext):
             stg_img[i] = stg_img[i] - 1
     return stg_img
 
+def LSB_extract_sequential(stg_img, h_p, w_p):
+    # Ensure stg_img is a numpy array
+    stg_img = np.array(stg_img)
+    
+    # Flatten the image to work with it sequentially
+    flat_stg_img = stg_img.flatten()
+    
+    # Calculate the length based on the dimensions provided
+    len = h_p * w_p
+    plaintext = np.zeros(len, dtype=np.uint8)
+    
+    # Extract the least significant bit (LSB) for each pixel
+    for i in range(len):
+        plaintext[i] = flat_stg_img[i] % 2
+    
+    # Reshape the extracted data back into the original dimensions
+    plaintext = plaintext.reshape(h_p, w_p)
+    return plaintext
+
 def LSB_extract_random(stg_img, stego_key, h_p, w_p):
     h, w = stg_img.shape
     
@@ -73,8 +92,9 @@ stg_img_seq = Image.fromarray(stg_img_seq)
 stg_img_seq.save('stego_sequential.png')
 
 # Extract the embedded bits
-res_plaintext_seq = LSB_extract_sequential(stg_img_seq, *plaintext.size)
-res_plaintext_seq = Image.fromarray(res_plaintext_seq.reshape(*plaintext.size)).convert('L')
+hp, wp = plaintext.shape
+res_plaintext_seq = LSB_extract_sequential(stg_img_seq, hp, wp)
+res_plaintext_seq = Image.fromarray(res_plaintext_seq.reshape(hp, wp)).convert('L')
 res_plaintext_seq.save('extracted_sequential.png')
 
 # Random LSB Steganography
@@ -83,8 +103,8 @@ stg_img_rand = Image.fromarray(stg_img_rand)
 stg_img_rand.save('stego_random.png')
 
 # Extract the embedded bits
-res_plaintext_rand = LSB_extract_random(stg_img_rand, stego_key, *plaintext.size)
-res_plaintext_rand = Image.fromarray(res_plaintext_rand.reshape(*plaintext.size)).convert('L')
+res_plaintext_rand = LSB_extract_random(stg_img_rand, stego_key, hp, wp)
+res_plaintext_rand = Image.fromarray(res_plaintext_rand.reshape(hp, wp)).convert('L')
 res_plaintext_rand.save('extracted_random.png')
 ```
 
