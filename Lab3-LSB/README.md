@@ -8,7 +8,7 @@ pip install numpy pillow
 ```
 
 
-## Pseudo Code （Please Fix It and Upload the Final Code。）
+## Pseudo Code （Please Fix It and Upload the Final Code.）
 
 ```python
 import numpy as np
