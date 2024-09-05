@@ -2,9 +2,13 @@
 
 Check the steps on Slide 34 of Lecture 2, and implement the LSB substitution based steganography (both sequential path and random path). You can choose any cover image and the information you would like to embed.  
 
+
 ```bash
 pip install numpy pillow
 ```
+
+
+## Pseudo Code （Please Fix It and Upload the Final Code。）
 
 ```python
 import numpy as np
