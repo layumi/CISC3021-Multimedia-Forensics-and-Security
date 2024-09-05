@@ -5,7 +5,7 @@ We'll primarily use the `numpy` library for numerical operations, `matplotlib` f
 # Preparation
 First, ensure you have the necessary packages installed:
 ```bash
-pip install numpy matplotlib pillow scipy imageio opencv-python
+pip install numpy matplotlib pillow scipy imageio opencv-python-headless
 ```
 
 # See Channels
