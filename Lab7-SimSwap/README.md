@@ -1,16 +1,38 @@
 # AI Security - FaceSwap
 
 Please try https://github.com/neuralchen/SimSwap 
-Follow the setting in Colab. 
 
-I suggest to run on our own 3090 machines. 
+I suggest to run on our own 3090 machines. Before you test the model, please ensure the environment. 
+
 ```bash
 conda create -n simswap python=3.6
 conda activate simswap
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
 pip install --ignore-installed imageio
-pip install insightface==0.2.1 onnxruntime moviepy
-pip install onnxruntime-gpu  (If you want to reduce the inference time)(It will be diffcult to install onnxruntime-gpu , the specify version of onnxruntime-gpu may depends on your machine and cuda version.)
+pip install --prefer-binary insightface onnxruntime-gpu moviepy 
+```
+
+# Download Model and Test data. 
+We could skip the training data. I think their googledrive link is blocked due to too much downloads.
+```bash
+cd checkpoints
+wget https://github.com/neuralchen/SimSwap/releases/download/512_beta/512.zip
+unzip 512.zip
+cd ..
+```
+
+![](https://github.com/neuralchen/SimSwap/raw/main/docs/img/multi_face_comparison.png)
+
+# Test one image 
+```bash
+python test_wholeimage_swap_multispecific.py --crop_size 512 --use_mask  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_b_path ./demo_file/multi_people.jpg --output_path ./output/ --multisepcific_dir ./demo_file/multispecific
+```
+Check more on https://github.com/neuralchen/SimSwap/blob/main/docs/guidance/usage.md 
+
+
+# Test video
+```bash
+python test_video_swap_multispecific.py --crop_size 224 --use_mask  --name people --Arc_path arcface_model/arcface_checkpoint.tar --video_path ./demo_file/multi_people_1080p.mp4 --output_path ./output/multi_test_multispecific.mp4 --temp_path ./temp_results --multisepcific_dir ./demo_file/multispecific 
 ```
 
 
