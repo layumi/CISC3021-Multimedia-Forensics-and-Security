@@ -15,10 +15,12 @@ pip install --prefer-binary insightface onnxruntime-gpu moviepy
 # Download Model and Test data. 
 We could skip the training data. I think their googledrive link is blocked due to too much downloads.
 ```bash
-cd checkpoints
+wget -P ./arcface_model https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar
+wget https://github.com/neuralchen/SimSwap/releases/download/1.0/checkpoints.zip
+unzip ./checkpoints.zip  -d ./checkpoints
+wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
 wget https://github.com/neuralchen/SimSwap/releases/download/512_beta/512.zip
-unzip 512.zip
-cd ..
+unzip ./512.zip -d ./checkpoints
 ```
 
 ![](https://github.com/neuralchen/SimSwap/raw/main/docs/img/multi_face_comparison.png)
