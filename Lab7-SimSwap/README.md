@@ -12,7 +12,7 @@ pip install --ignore-installed imageio
 pip install --prefer-binary insightface onnxruntime-gpu moviepy 
 ```
 
-# Download Model and Test data. 
+# Download Trained Model. 
 We could skip the training data. I think their googledrive link is blocked due to too much downloads.
 ```bash
 wget -P ./arcface_model https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar
