@@ -14,7 +14,7 @@ Blog: https://www.assemblyai.com/blog/stable-diffusion-1-vs-2-what-you-need-to-k
 
 Video: https://www.youtube.com/watch?v=gILYw4spk8U  ;
 
-## Report the following questions
+## Report the answer to the following questions
 
 1. Try Stable Diffusion 1.5, Stable Diffusion 2.0 and Stable-XL. Observe the difference and try to explain the different. 
 
