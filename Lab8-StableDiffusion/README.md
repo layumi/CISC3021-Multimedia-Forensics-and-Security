@@ -8,7 +8,7 @@ API: https://huggingface.co/stabilityai/stable-diffusion-2 ;
 
 API: https://civitai.com/generate (with negative prompt. Stable Diffusion 1.5) 
 
-## See Reference
+## Read Reference
 
 Blog: https://www.assemblyai.com/blog/stable-diffusion-1-vs-2-what-you-need-to-know/ ;
 
