@@ -41,6 +41,10 @@ The running command will be `python cifar.py --dataset cifar10 --arch resnet --d
 
 https://github.com/aleju/imgaug
 
+Add the data augmentation to the training part at this line https://github.com/zhunzhong07/Random-Erasing/blob/master/cifar.py#L107 . 
+
 ## 5. Thinking.
-**Why most data augmentation will compromise the performance? Do you still remember the bar chart in steganalysis. Please always check the data distribution after any data augmentation.**
+1. Why most data augmentation will compromise the performance?
+2. Do you still remember the bar chart in steganalysis? Think about the data distribution after any data augmentation.
+3. What is (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010) in https://github.com/zhunzhong07/Random-Erasing/blob/master/cifar.py#L110? Try to search these numbers.
 
