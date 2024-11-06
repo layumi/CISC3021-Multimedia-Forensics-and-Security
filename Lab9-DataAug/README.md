@@ -37,7 +37,7 @@ The running command will be `python cifar.py --dataset cifar10 --arch resnet --d
 
 ## 4. Challenge. Try to adding more data augmentation.
 
-![](https://raw.githubusercontent.com/aleju/imgaug-doc/master/readme_images/small_overview/non_geometric_kps.jpg?raw=true)
+![](https://raw.githubusercontent.com/aleju/imgaug-doc/master/readme_images/examples_grid.jpg?raw=true)
 
 https://github.com/aleju/imgaug
 
