@@ -6,6 +6,8 @@ Today, we will check several data augmentation methods.
 The key is that such methods do not change the original meaning of the image. 
 In particular, people still could recognize the object within the image. 
 
+![](https://github.com/zhunzhong07/Random-Erasing/raw/master/all_examples-page-001.jpg)
+
 Please check our baseline code at https://github.com/zhunzhong07/Random-Erasing.
 
 ## 1. Reproduce results
@@ -39,5 +41,6 @@ The running command will be `python cifar.py --dataset cifar10 --arch resnet --d
 
 https://github.com/aleju/imgaug
 
-**Think why most data augmentation will compromise the performance.**
+## 5. Thinking.
+**Why most data augmentation will compromise the performance? Do you still remember the bar chart in steganalysis.**
 
