@@ -2,9 +2,9 @@
 
 Our learned methods, such as watermarking and Steganography, also can be used in the data augmentation.
 
-Today, we will check several data augmentation methods. 
-The key is that such methods do not change the original meaning of the image. 
-In particular, people still could recognize the object within the image. 
+Today, we will examine several methods of data augmentation.
+The essential point is that these methods do not alter the fundamental meaning of the image.
+Specifically, people should still be able to recognize the objects within the image.
 
 ![](https://github.com/zhunzhong07/Random-Erasing/raw/master/all_examples-page-001.jpg)
 
@@ -42,5 +42,5 @@ The running command will be `python cifar.py --dataset cifar10 --arch resnet --d
 https://github.com/aleju/imgaug
 
 ## 5. Thinking.
-**Why most data augmentation will compromise the performance? Do you still remember the bar chart in steganalysis.**
+**Why most data augmentation will compromise the performance? Do you still remember the bar chart in steganalysis. Please always check the data distribution after any data augmentation.**
 
