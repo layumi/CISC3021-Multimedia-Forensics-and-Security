@@ -9,7 +9,7 @@ conda create -n simswap python=3.12
 conda activate simswap
 conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 cudatoolkit=12.2 -c pytorch
 pip install --ignore-installed imageio
-pip install --prefer-binary insightface onnx==1.17.0 onnxruntime==1.19.2 moviepy 
+pip install --prefer-binary insightface onnx==1.17.0 onnxruntime==1.19.2 moviepy==1.0.3 
 ```
 
 # Download Trained Model. 
