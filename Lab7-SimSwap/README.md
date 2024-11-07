@@ -5,11 +5,11 @@ Please try https://github.com/neuralchen/SimSwap
 I suggest to run on our own 3090 machines. Before you test the model, please ensure the environment. 
 
 ```bash
-conda create -n simswap python=3.6
+conda create -n simswap python=3.12
 conda activate simswap
-conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
+conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 cudatoolkit=12.2 -c pytorch
 pip install --ignore-installed imageio
-pip install --prefer-binary insightface onnxruntime-gpu moviepy 
+pip install --prefer-binary insightface onnx==1.17.0 onnxruntime==0.19.2 moviepy 
 ```
 
 # Download Trained Model. 
