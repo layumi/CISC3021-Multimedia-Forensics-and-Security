@@ -30,4 +30,5 @@ Try to find some common failure.
 
 Try to understand every hyper-parameters. 
 https://github.com/Texaser/MTN/blob/main/main.py#L22-L173 
+
 Change one hyper-parameter to see the effect.
