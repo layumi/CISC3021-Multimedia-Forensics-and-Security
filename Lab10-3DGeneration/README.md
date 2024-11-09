@@ -1,5 +1,7 @@
-#3D Generation (about 10~30-minute training on Nvidia 3090)
+# 3D Generation (about 10~30-minute training on Nvidia 3090)
+
 Code: https://github.com/Texaser/MTN
+
 Video: https://www.youtube.com/watch?v=LH6-wKg30FQ
 
 ### Note
