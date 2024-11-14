@@ -7,7 +7,7 @@ I suggest to run on our own 3090 machines. Before you test the model, please ens
 ```bash
 conda create -n simswap python=3.12
 conda activate simswap
-conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 cudatoolkit=12.1 -c pytorch -c nvidia
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install --ignore-installed imageio
 pip install --prefer-binary insightface onnx==1.17.0 onnxruntime==1.19.2 moviepy==1.0.3 
 ```
