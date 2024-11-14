@@ -21,6 +21,8 @@ unzip ./checkpoints.zip  -d ./checkpoints
 wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
 wget https://github.com/neuralchen/SimSwap/releases/download/512_beta/512.zip
 unzip ./512.zip -d ./checkpoints
+wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKDcV3nwMJulRGhbtHdkheehR5TArc52UjudUYNXAEvKCii2O5LAmzGCGK6IfleocxuDeoKxDZkNzDRSt4ZUlEt8GlSOpCXAFEkBwaZimtWGDRbpIGpb_pz9Nq5jATBQpezBS6G_UtspWTkgrXHHxhviV2nWy8APPx134zOZrUIbkSF6xnsqzs3uZ_SEX_m9Rey0ykpx9w" -O antelope.zip
+unzip ./antelope.zip -d ./insightface_func/models/
 ```
 
 ![](https://github.com/neuralchen/SimSwap/raw/main/docs/img/multi_face_comparison.png)
